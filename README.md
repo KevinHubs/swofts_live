@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/swoft-cloud/swoft" target="_blank">
-        <img src="http://qiniu.daydaygo.top/swoft-logo.png?imageView2/2/w/300" alt="swoft" />
+        <img src="http://152.136.92.167/WechatIMG422.png" alt="swoft" />
     </a>
 </p>
 
@@ -14,6 +14,8 @@
 
 
 # 简介
+微服务直播系统 指导人：pack/peter
+
 首个基于 Swoole 原生协程的新时代 PHP 高性能协程全栈组件化框架，内置协程网络服务器及常用的协程客户端，常驻内存，不依赖传统的 PHP-FPM，全异步非阻塞 IO 实现，以类似于同步客户端的写法实现异步客户端的使用，没有复杂的异步回调，没有繁琐的 yield，有类似 Go 语言的协程、灵活的注解、强大的全局依赖注入容器、完善的服务治理、灵活强大的 AOP、标准的 PSR 规范实现等等，可以用于构建高性能的Web系统、API、中间件、基础服务等等。
 
 - 基于 Swoole 扩展
