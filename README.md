@@ -42,11 +42,6 @@
 - 跨平台热更新自动 Reload
 
 
-# 文档
-[**中文文档**](https://doc.swoft.org)
-
-QQ 交流群: 548173319
-
 # 环境要求
 
 1. PHP 7.0 +
@@ -203,9 +198,3 @@ php bin/swoft rpc:stop
 
 ```
 
-# 更新日志
-
-[更新日志](changelog.md)
-
-# 协议
-Swoft 的开源协议为 Apache-2.0，详情参见[LICENSE](LICENSE)
