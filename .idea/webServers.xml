@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a914c989-6f6d-443c-9322-6c96630f7896" name="test" url="http://152.136.92.167">
+        <fileTransfer host="152.136.92.167" port="22" rootFolder="/usr/local/nginx/html/swofts" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
