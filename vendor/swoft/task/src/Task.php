@@ -160,16 +160,13 @@ class Task
                 App::error(sprintf('Task %s format error.', $task['name'] ?? '[UNKNOWN]'));
                 continue;
             }
-
             $type = $task['type'];
             if ($type !== static::TYPE_CO) {
                 App::error(sprintf('Task %s is not a coroutine task.', $task['name']));
                 continue;
             }
-
             $taskCos[] = TaskHelper::pack($task['name'], $task['method'], $task['params'], $task['type']);
         }
-
         $result = [];
         if (! empty($taskCos)) {
             $result = App::$server->getServer()->taskCo($tasks);

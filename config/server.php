@@ -41,7 +41,12 @@ return [
         'type'  => env('HTTP_TYPE', SWOOLE_SOCK_TCP),
     ],
     'ws'  => [
-        // enable handle http request ?
+//        'on'       => [
+//            \Swoft\Bootstrap\SwooleEvent::ON_TASK  => \bean(TaskFinish::class),  // Enable task must task and finish event
+//            \Swoft\Bootstrap\SwooleEvent::ON_FINISH => \bean(FinishListener::class),
+//        ],
+        'task_worker_num'       => 12,
+        'task_enable_coroutine' => true,
         'enable_http' => env('WS_ENABLE_HTTP', true),
         // other settings will extend the 'http' config
         // you can define separately to overwrite existing settings

@@ -29,7 +29,6 @@ class TaskHelper
 
         $task['logid']  = RequestContext::getLogid();
         $task['spanid'] = RequestContext::getSpanid();
-
         return serialize($task);
     }
 

@@ -23,7 +23,7 @@ use Swoft\Rpc\Server\Rpc\RpcServer;
 use Swoft\Tcp\Server\Tcp\TcpServer;
 use Swoft\Auth\Mapping\AuthorizationParserInterface;
 use Swoole\Mysql\Exception;
-
+use Swoft\Task\Task;
 /**
  * Class LiveController
  * @Controller(prefix="live")
@@ -90,12 +90,16 @@ class LiveController{
             var_dump("进入publish try程序段");
             $parser = App::getBean(AuthorizationParserInterface::class);
             $parser->parse($request);
-            //获取token
             $token = $request->getHeaderLine(AuthConstants::HEADER_KEY);
-            var_dump($token);
+            // 协程投递
+            $result  = Task::co([
+                ['name'=>'demoTask','method'=> 'test','params'=>[2],'type'=>Task::TYPE_CO]
+            ]);
+            var_dump($result);
+//            var_dump($result);
             //创建子进程，进行ffmpeg进行转码
             //ProcessBuilder::create('customProcess')->start();
-            $process = new Process($token);
+            //$process = new Process($token);
         }catch (\Exception $e)
         {
             var_dump("Live控制器抛出异常信息：".$e->getMessage(),$e->getFile(),$e->getLine(),$e->getCode());
