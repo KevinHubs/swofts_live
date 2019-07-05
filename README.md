@@ -56,20 +56,8 @@
 ## 手动安装
 
 * Clone 项目
-* 安装依赖 `composer install`
+* git clone git@github.com:KevinHubs/swofts_live.git
 
-## Composer 安装
-
-* `composer create-project swoft/swoft swoft`
-
-## Docker 安装
-
-* `docker run -p 80:80 swoft/swoft`
-
-## Docker-Compose 安装
-
-* `cd swoft`
-* `docker-compose up`
 
 # 配置
 
@@ -114,7 +102,7 @@ TASK_WORKER_NUM=1
 ### 帮助命令
 
 ```text
-[root@swoft]# php bin/swoft -h
+[root@swoft]# php bin/swoft ws:start
  ____                __ _
 / ___|_      _____  / _| |_
 \___ \ \ /\ / / _ \| |_| __|
